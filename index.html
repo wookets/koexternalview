@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Knockout Example</title>
+	
+	  <link rel="stylesheet" href="http://cdn.wookets.com/lib/bootstrap/1.4.0/bootstrap.min.css">
+  	
+	  <script type="text/javascript" src="http://cdn.wookets.com/lib/jquery/jquery-1.7.1.min.js"></script>
+	  <script type="text/javascript" src="http://cdn.wookets.com/lib/jquery-templates/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="http://cdn.wookets.com/lib/knockout/knockout-1.2.1.min.js"></script>
+		<script type="text/javascript" src="http://cdn.wookets.com/lib/knockout-namespaces/knockout.namespaces.min.js"></script>
+		<script type="text/javascript" src="http://cdn.wookets.com/lib/knockout-extmpl/koExternalTemplateEngine.js"></script>
+		<script type="text/javascript" src="http://cdn.wookets.com/lib/knockout-bindings/knockout_bindings.js"></script>
+		<script type="text/javascript" src="http://cdn.wookets.com/lib/jquery-address/jquery.address.js"></script>
+		
+		<script type="text/javascript" src="js/app.js"></script>
+	</head>
+	<body>
+		<div id="menu">
+			<ul>
+				<li data-bind="click: function() { VM.actualTemplate('main');}">
+					Main
+				</li>
+				<li data-bind="click: function() { VM.actualTemplate('about');}">
+					About
+				</li>
+				<li data-bind="click: function() { VM.actualTemplate('admin');}">
+					Admin
+				</li>
+			</ul>
+		</div>
+		<div id="content" data-bind="template: {name: templateMode}"></div>
+	</body>
+</html>
